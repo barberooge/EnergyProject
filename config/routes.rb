@@ -9,12 +9,16 @@ Rails.application.routes.draw do
   get 'contact', to: 'static_pages#contact'
 
   resources :users
+    
+  resources :companies
 
   get 'signup', to: 'users#new'
 
   post 'signup',  to: 'users#create'
 
   get 'edit', to: 'users#edit'
+    
+  get ':id', to: 'users#show'
 
   get 'login',   to: 'sessions#new'
     
