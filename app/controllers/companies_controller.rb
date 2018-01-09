@@ -3,7 +3,7 @@ class CompaniesController < ApplicationController
       before_action :correct_user,   only: [:edit, :update]
 
   def index
-      @companiess = Company.all
+      @companies = Company.all
   end
 
   def new
