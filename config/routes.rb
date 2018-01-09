@@ -17,8 +17,6 @@ Rails.application.routes.draw do
   post 'signup',  to: 'users#create'
 
   get 'edit', to: 'users#edit'
-    
-  get ':id', to: 'users#show'
 
   get 'login',   to: 'sessions#new'
     

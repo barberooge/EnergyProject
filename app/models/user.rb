@@ -1,4 +1,10 @@
 class User < ApplicationRecord
+      enum role: [:utilisateur, :actionnaire, :société, :admin]
+      after_initialize :set_default_role, :if => :new_record?
+
+      def set_default_role
+        self.role ||= :utilisateur
+      end
       attr_accessor :remember_token
       before_save { email.downcase! }
       validates :first_name, presence: true, length: { maximum: 50 }
