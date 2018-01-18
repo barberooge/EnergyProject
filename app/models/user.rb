@@ -5,6 +5,7 @@ class User < ApplicationRecord
       def set_default_role
         self.role ||= :utilisateur
       end
+
       attr_accessor :remember_token
       before_save { email.downcase! }
       validates :first_name, presence: true, length: { maximum: 50 }
