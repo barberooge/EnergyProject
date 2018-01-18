@@ -4,7 +4,9 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Accueil", root_path %></li>
-        <li><%= link_to "Aide", help_path %></li>
+          <li><a href="#fonctionnalités">Fonctionnalités</a></li>
+          <li><a href="#howitworks">Comment ça marche</a></li>
+        <li><a><em>Tarifs</em></a></li>
         <% if logged_in? %>
           <li><%= link_to "Utilisateurs", users_path %></li>
           <li><%= link_to "Sociétés", companies_path %></li>
